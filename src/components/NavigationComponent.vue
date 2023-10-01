@@ -142,7 +142,8 @@ section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 63px 128px 25px 128px;
+    gap: 15px;
+    padding: 53px 128px 25px 128px;
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     // display: none;
@@ -164,7 +165,7 @@ section {
       display: flex;
       justify-content: space-between;
       flex-direction: row;
-      gap: 5.6rem;
+      gap: 56px;
       li {
         //   margin-right: 56px;
         cursor: pointer;
