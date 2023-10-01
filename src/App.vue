@@ -1,4 +1,4 @@
-<script setup>
+<script>
 import { RouterLink, RouterView } from 'vue-router'
 </script>
 
@@ -8,4 +8,9 @@ import { RouterLink, RouterView } from 'vue-router'
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* @font-face {
+  font-family: 'Clash Display';
+  src: url('../assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
+} */
 </style>

@@ -1,6 +1,6 @@
 /* color palette from <https://github.com/vuejs/theme> */
 :root {
-  --vt-c-white: #140d27;
+  --vt-c-white: #150e28;
   /* --vt-c-white-soft: #f8f8f8;
   --vt-c-white-mute: #f2f2f2; */
 
@@ -27,6 +27,7 @@
 /* semantic color variables for this project */
 :root {
   --color-background: var(--vt-c-white);
+  --color-text: var(--vt-c-text-dark-2);
   /* --color-background-soft: var(--vt-c-white-soft);
   --color-background-mute: var(--vt-c-white-mute);
 
@@ -49,7 +50,6 @@
     --color-border-hover: var(--vt-c-divider-dark-1);
 
     --color-heading: var(--vt-c-text-dark-1); */
-    --color-text: var(--vt-c-text-dark-2);
   }
 }
 
@@ -69,4 +69,145 @@ body {
     background-color 0.5s;
   /* line-height: 1.6; */
   font-family: Montserrat;
+}
+
+h1,
+h2,
+h3 {
+}
+
+.btn {
+  border-radius: 4px;
+  /* min-width: 172px; */
+  padding: 1.6rem 5.2rem;
+  font-weight: 400;
+  height: 53px;
+  font-size: 16px;
+  color: #ffffff;
+  border: 0;
+  background: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+  cursor: pointer;
+}
+
+@include media('<phone') {
+  overflow-x: hidden;
+}
+
+ul,
+li {
+  list-style: none;
+
+  padding: 0;
+}
+
+.color-purple {
+  color: #d434fe;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+  cursor: inherit;
+}
+
+.blur-one {
+  position: absolute;
+  top: 0;
+  left: -120px;
+  filter: blur(90px);
+  width: 600px;
+  /* width: 1037px;
+   height: 948px; */
+  z-index: -1;
+  background-blend-mode: hard-light;
+}
+.blur-two {
+  position: absolute;
+  bottom: 0;
+  /* right: -120px; */
+  right: 0;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  z-index: -1;
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+  /* display: none; */
+}
+.blur-three {
+  position: absolute;
+  top: -100px;
+  /* right: -120px; */
+  right: 30%;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  z-index: -1;
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+}
+.blur-four {
+  position: absolute;
+  top: 350px;
+  /* right: -120px; */
+  left: 70px;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  z-index: -2;
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+  display: none;
+}
+.blur-five {
+  position: absolute;
+  top: 350px;
+  /* right: -120px; */
+  left: 70px;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  /* z-index: -1; */
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+  /* display: none; */
+}
+.blur-six {
+  position: absolute;
+  bottom: 0;
+  /* right: -120px; */
+  right: 0;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  /* z-index: 1; */
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #140d27;
+  border: none;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #d434fe;
+  border-radius: 12px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

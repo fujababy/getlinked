@@ -1,0 +1,16 @@
+$breakpoints: (
+  'smphone': 390px,
+  'phone': 768px,
+  'large': 992px,
+  'tablet': 1024px,
+  'desktop': 1200px,
+  'cdesktop': 1281px,
+  'ldesktop': 1400px,
+  'xldesktop': 1700px
+) !default;
+
+// @import "../../node_modules/include-media/dist/include-media";
+
+// @import '../../node_modules/include-media/dist/include-media';
+
+@import '../../../../node_modules/include-media/dist/include-media';
