@@ -35,6 +35,11 @@
         <p>Can I work on a project I started before the hackathon?</p>
         <img src="../assets/svg/+.svg" alt="" />
       </div>
+
+      <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+      <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+      <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+      <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
     </div>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-three" />

@@ -35,6 +35,13 @@
       </p>
       <button class="btn">Read More</button>
     </div>
+
+    <!--  -->
+
+    <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+    <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+    <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+    <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
   </div>
 </template>
 
@@ -42,6 +49,7 @@
 
 <style lang="scss" scoped>
 .media {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;

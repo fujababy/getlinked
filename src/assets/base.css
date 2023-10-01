@@ -212,3 +212,25 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+.absolute__items-2 {
+  position: absolute;
+  top: 40px;
+  left: -90px;
+}
+.absolute__items-4 {
+  position: absolute;
+
+  bottom: -20px;
+}
+.absolute__items-3 {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.absolute__items-1 {
+  position: absolute;
+  top: 20px;
+  right: 350px;
+}

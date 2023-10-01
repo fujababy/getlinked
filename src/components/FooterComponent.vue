@@ -57,10 +57,10 @@
         </div>
       </section>
 
-      <!-- <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
-      <img class="absolute__items-2" src="../assets/icons/star (1).svg" alt="" />
-      <img class="absolute__items-3" src="../assets/icons/star (2).svg" alt="" />
-      <img class="absolute__items-4" src="../assets/icons/sata gra.svg" alt="" /> -->
+      <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+      <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+      <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+      <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
     </footer>
     <h4 class="all__rights">All rights reserved. &copy getlinked Ltd.</h4>
   </div>
@@ -215,28 +215,6 @@
           }
         }
       }
-    }
-
-    .absolute__items-2 {
-      position: absolute;
-      top: 40px;
-      left: -90px;
-    }
-    .absolute__items-4 {
-      position: absolute;
-
-      bottom: -20px;
-    }
-    .absolute__items-3 {
-      position: absolute;
-      bottom: 0;
-      right: 0;
-    }
-
-    .absolute__items-1 {
-      position: absolute;
-      top: 20px;
-      right: 350px;
     }
   }
   .all__rights {

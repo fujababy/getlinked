@@ -116,6 +116,11 @@
     <!-- purple blur flare -->
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-two" />
+
+    <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+    <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+    <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+    <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
   </section>
 </template>
 <script>
