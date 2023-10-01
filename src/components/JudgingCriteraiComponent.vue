@@ -57,6 +57,7 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top: none;
   border-right: none;
+  border-left: 0;
   padding-top: 80px;
   padding-bottom: 100px;
   //   height: 617px;

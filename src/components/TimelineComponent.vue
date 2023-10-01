@@ -1,6 +1,6 @@
 <template>
   <div>
-    <header>
+    <header data-aos="fade-up">
       <h1>Timeline</h1>
       <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
     </header>

@@ -61,6 +61,7 @@
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top: none;
   border-right: none;
+  border-left: 0;
   height: 617px;
 
   @media screen and (max-width: 820px) {

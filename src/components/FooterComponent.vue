@@ -20,7 +20,9 @@
           <li>Overview</li>
           <li>Timeline</li>
           <li>FAQs</li>
-          <li>Register</li>
+          <router-link :to="{ name: 'Register' }">
+            <li>Register</li>
+          </router-link>
         </ul>
         <div class="socials__container">
           <div class="socials__text">
