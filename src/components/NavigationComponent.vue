@@ -1,6 +1,6 @@
 <template>
   <section>
-    <nav class="desktop-view">
+    <!-- <nav class="desktop-view">
       <a href="/">
         <h1>get<span class="color-purple">linked</span></h1>
       </a>
@@ -24,16 +24,15 @@
       <router-link :to="{ name: 'Register' }">
         <button class="btn">Register</button>
       </router-link>
-    </nav>
+    </nav> -->
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
 
-    <!-- mobile nav -->
     <nav class="mobile-menu">
-      <a href="/ " v-if="anchor">
-        <h1>get<span class="color-purple">linked</span></h1>
+      <a href="/ ">
+        <h1 v-if="!showMenu">get<span class="color-purple">linked</span></h1>
       </a>
-      <!--  -->
+
       <div class="nav-modal" v-if="showMenu">
         <ul>
           <router-link :to="{ name: 'Home' }">
@@ -53,22 +52,35 @@
           <button class="btn">Register</button>
         </router-link>
       </div>
-      <!--  -->
-      <button @click="toggleShowMenu">
-        <img
-          v-if="!showMenu"
-          src="../assets/svg/opentoggle-icon.svg"
-          alt=""
-          @click="anchor = !anchor"
-        />
-        <img
-          @click="anchor = !anchor"
-          v-if="showMenu"
-          src="../assets/svg/opentoggle-icon.svg"
-          alt=""
-        />
-      </button>
+
+      <!-- <button @click="toggleShowMenu"> -->
+      <img v-if="showMenu" src="../assets/svg/opentoggle-icon.svg" alt="" @click="toggleShowMenu" />
+      <img
+        v-if="!showMenu"
+        @click="toggleShowMenu"
+        src="../assets/svg/opentoggle-icon.svg"
+        alt=""
+      />
+      <!-- </button> -->
     </nav>
+
+    <!-- <div class="flex-container">
+      <div class="header">
+        <h1 v-if="!showBooks">gerlinked</h1>
+      </div>
+      <div class="list" v-if="showBooks">
+        <ul>
+          <li>12</li>
+          <li>123</li>
+          <li>1234</li>
+        </ul>
+      </div> -->
+    <!-- <div class="image">
+        <img src="../assets/svg/menu-icon.svg" alt="" />
+      </div> -->
+    <!-- <button v-if="showBooks" @click="toggleShowBooks">hide books</button>
+      <button v-if="!showBooks" @click="toggleShowBooks">shide books</button>
+    </div> -->
   </section>
 </template>
 
@@ -76,8 +88,10 @@
 export default {
   data() {
     return {
-      showMenu: 'true'
+      showMenu: false
       // anchor: 'false'
+      // showBooks: false
+      // showHead: !false
     }
   },
   methods: {
@@ -85,11 +99,38 @@ export default {
       this.showMenu = !this.showMenu
     }
   }
+  // methods: {
+  //   toggleShowBooks() {
+  //     this.showBooks = !this.showBooks
+  //   }
+  // }
 }
 </script>
 
 <style lang="scss" scoped>
 section {
+  // .flex-container {
+  //   display: none;
+  //   .header {
+  //     .list {
+  //     }
+  //   }
+
+  //   @media screen and (max-width: 768px) {
+  //     display: block;
+  //     display: flex;
+  //     justify-content: space-between;
+
+  //     .list {
+  //       @media screen and (max-width: 768px) {
+  //         // display: none;
+  //         align-self: flex-start;
+  //         margin-top: 50px;
+  //       }
+  //     }
+  //   }
+  // }
+
   .desktop-view {
     position: fixed;
     background: #150e28;
@@ -158,6 +199,8 @@ section {
     }
 
     .nav-modal {
+      margin-left: -130px;
+      // margin-top: 40px;
       ul {
         font-size: 16px;
         font-weight: 400;
@@ -173,6 +216,10 @@ section {
           margin-bottom: 29px;
           cursor: pointer;
         }
+
+        // :nth-child(4) {
+        //   color: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
+        // }
       }
     }
   }

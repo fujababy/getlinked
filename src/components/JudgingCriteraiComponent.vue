@@ -56,7 +56,7 @@
   @media screen and (max-width: 820px) {
     flex-direction: column;
     height: auto;
-    text-align: center;
+    // text-align: center;
     gap: 0;
     padding-left: 48px;
     padding-right: 48px;
@@ -74,7 +74,7 @@
   }
   .media__body {
     @media screen and (max-width: 768px) {
-      // text-align: center;
+      text-align: center;
     }
     .media__header {
       font-family: Clash Display;
@@ -90,6 +90,7 @@
         width: 188px;
         margin: auto;
         line-height: 133%;
+        margin-bottom: 1.5rem;
       }
 
       .color-purple {
