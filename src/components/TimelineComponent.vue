@@ -203,7 +203,7 @@
         </div>
 
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>4</span>
           </div>
@@ -227,7 +227,7 @@
           </p>
         </div>
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>5</span>
           </div>
@@ -245,7 +245,7 @@
         </div>
 
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>6</span>
           </div>
@@ -271,7 +271,7 @@
 
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>1</span>
           </div>
@@ -290,7 +290,7 @@
       <!--  -->
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>2</span>
           </div>
@@ -309,7 +309,7 @@
       <!--  -->
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>3</span>
           </div>
@@ -325,7 +325,7 @@
       <!--  -->
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>4</span>
           </div>
@@ -344,7 +344,7 @@
       <!--  -->
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>5</span>
           </div>
@@ -362,7 +362,7 @@
       <!--  -->
       <div class="flex__items">
         <div class="flex-one">
-          <img src="../assets/svg/Line 9.svg" alt="" />
+          <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
             <span>6</span>
           </div>
