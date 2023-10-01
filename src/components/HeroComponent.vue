@@ -20,7 +20,7 @@
           <button class="btn hero__btn">Register</button>
 
           <!-- <div class="hero__icons"> -->
-          <img class="bulb-icon" src="../assets/svg/Creative 1.svg" alt="" />
+          <img class="bulb-icon" src="../assets/svg/Creative1.svg" alt="" />
           <img class="chain-icon" src="../assets/svg/chain-9365116-7621444.svg" alt="" />
           <img class="smash-icon" src="../assets/svg/1f4a5.svg" alt="" />
           <!-- </div> -->
@@ -28,7 +28,7 @@
 
         <div class="hero__media">
           <picture>
-            <img class="hero__image animate-pulse" src="../assets/svg/Hackathon guy.svg" alt="" />
+            <img class="hero__image animate-pulse" src="../assets/svg/Hackathonguy.svg" alt="" />
           </picture>
         </div>
       </div>
