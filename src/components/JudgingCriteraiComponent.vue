@@ -3,8 +3,7 @@
     <div class="media__image" data-aos="fade-up" data-aos-duration="900">
       <img
         class="judging-image"
-        src="../assets/svg/judge
-      .svg"
+        src="../assets/svg/.svg"
         alt=""
       />
     </div>
