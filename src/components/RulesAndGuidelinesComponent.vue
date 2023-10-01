@@ -15,7 +15,7 @@
     </div>
 
     <div class="media__image">
-      <img class="rules-image" src="../assets/svg/7450159 1.svg" alt="" />
+      <img class="rules-image" src="../assets/svg/girl.svg" alt="" />
     </div>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
