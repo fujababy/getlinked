@@ -6,7 +6,7 @@
     </header>
     <!--  -->
     <div class="timeline__body">
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex--one text--align">
           <h2 class="header">Hackathon Announcement</h2>
           <p class="header--text">
@@ -27,7 +27,7 @@
       </div>
 
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex--three">
           <p class="november text--align">November 18, 2023</p>
         </div>
@@ -49,7 +49,7 @@
       </div>
 
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex--one text--align">
           <h2 class="header">Teams Registration ends</h2>
           <p class="header--text">Interested Participants are no longer Allowed to register</p>
@@ -67,7 +67,7 @@
       </div>
 
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex--three">
           <p class="november text--align">November 18, 2023</p>
         </div>
@@ -89,7 +89,7 @@
       </div>
 
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex--one text--align">
           <h2 class="header">Getlinked Hackathon 1.0 Offically Begins</h2>
           <p class="header--text">
@@ -109,7 +109,7 @@
       </div>
 
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex--three">
           <p class="november text--align">November 18, 2023</p>
         </div>
@@ -139,7 +139,7 @@
         <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
       </div>
 
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -158,7 +158,7 @@
         </div>
       </div>
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -177,7 +177,7 @@
         </div>
       </div>
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -193,7 +193,7 @@
         </div>
       </div>
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -212,7 +212,7 @@
         </div>
       </div>
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-right" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -230,7 +230,7 @@
         </div>
       </div>
       <!--  -->
-      <div class="flex__items">
+      <div class="flex__items" data-aos="fade-left" data-aos-duration="900">
         <div class="flex-one">
           <img src="../assets/svg/Line9.svg" alt="" />
           <div class="mobile-number-container">
@@ -284,6 +284,7 @@ header {
   padding-bottom: 50px;
   padding-left: 48px;
   padding-right: 48px;
+  overflow: hidden;
 
   @media screen and (max-width: 767px) {
     display: none;
@@ -357,6 +358,7 @@ header {
 }
 
 section {
+  overflow: hidden;
   @media screen and (min-width: 768px) {
     display: none;
   }

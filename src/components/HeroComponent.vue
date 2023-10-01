@@ -17,7 +17,9 @@
               >Participate in getlinked tech Hackathon 2023 stand a chance to win a Big prize</span
             >
           </div>
-          <button class="btn hero__btn">Register</button>
+          <router-link :to="{ name: 'Register' }">
+            <button class="btn hero__btn">Register</button>
+          </router-link>
 
           <!-- <div class="hero__icons"> -->
           <img class="bulb-icon" src="../assets/svg/Creative1.svg" alt="" />

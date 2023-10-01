@@ -1,6 +1,6 @@
 <template>
   <section>
-    <!-- <nav class="desktop-view">
+    <nav class="desktop-view">
       <a href="/">
         <h1>get<span class="color-purple">linked</span></h1>
       </a>
@@ -24,7 +24,7 @@
       <router-link :to="{ name: 'Register' }">
         <button class="btn">Register</button>
       </router-link>
-    </nav> -->
+    </nav>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
 

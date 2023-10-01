@@ -211,6 +211,7 @@ export default {
   position: relative;
   overflow: hidden;
   // width: 100%;
+  // margin-top: 115px;
   @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
@@ -220,15 +221,14 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    // // height: 100vh;
-    // height: auto;
+    margin-top: 115px;
     position: relative;
-
-    // gap: 225px;
+    margin-bottom: 115px;
 
     @media screen and (max-width: 820px) {
       flex-direction: column;
       // height: auto;
+      margin-top: 0;
     }
 
     .flex__one {
@@ -296,8 +296,13 @@ export default {
       justify-content: center;
       align-items: center;
       width: 100%;
-
+      margin-top: 115px;
       height: 100vh;
+
+      @media screen and (max-width: 768px) {
+        margin-top: 0;
+      }
+
       form {
         border-radius: 12px;
         background: rgba(255, 255, 255, 0.03);
