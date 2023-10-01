@@ -7,7 +7,7 @@
         <span>Congratulations you have successfully Registered!</span>
         <span>Yes, it was easy and you did it! </span>
         <span>check your mail box for next step </span>
-        <img src="../assets/icons/1531010992wink-emoji-woman-png 1.svg" alt="" />
+        <img src="../assets/icons/1531010992wink-emoji-woman.svg" alt="" />
       </div>
 
       <button class="btn btn-back">Back</button>
