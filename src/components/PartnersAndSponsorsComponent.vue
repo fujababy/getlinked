@@ -14,20 +14,20 @@
 
       <div class="partners__body">
         <div class="upper__logo">
-          <img src="../assets/svg/Liberty company logo white colour.svg" alt="" />
-          <img class="line" src="../assets/svg/Line 17.svg" alt="" />
-          <img src="../assets/svg/Liberty company logo white.svg" alt="" />
-          <img class="line" src="../assets/svg/Line 17.svg" alt="" />
-          <img src="../assets/svg/Winwise logo White colour 1.svg" alt="" />
-          <img src="../assets/svg/wisper logo white.svg" alt="" />
-          <img class="line" src="../assets/svg/Line 17.svg" alt="" />
+          <img src="../assets/svg/Liberty.svg" alt="" />
+          <img class="line" src="../assets/svg/Line17.svg" alt="" />
+          <img src="../assets/svg/Liberty.svg" alt="" />
+          <img class="line" src="../assets/svg/Line17.svg" alt="" />
+          <img src="../assets/svg/Winwise.svg" alt="" />
+          <img src="../assets/svg/wisper.svg" alt="" />
+          <img class="line" src="../assets/svg/Line17.svg" alt="" />
           <img src="../assets/svg/Paybox.svg" alt="" />
-          <img class="line" src="../assets/svg/Line 17.svg" alt="" />
-          <img src="../assets/svg/Vuzual Plus.svg" alt="" />
+          <img class="line" src="../assets/svg/Line17.svg" alt="" />
+          <img src="../assets/svg/VuzualPlus.svg" alt="" />
 
-          <img class="horizontal__line horizontal__line-1" src="../assets/svg/Line 18.svg" alt="" />
-          <img class="horizontal__line horizontal__line-2" src="../assets/svg/Line 18.svg" alt="" />
-          <img class="horizontal__line horizontal__line-3" src="../assets/svg/Line 18.svg" alt="" />
+          <img class="horizontal__line horizontal__line-1" src="../assets/svg/Line18.svg" alt="" />
+          <img class="horizontal__line horizontal__line-2" src="../assets/svg/Line18.svg" alt="" />
+          <img class="horizontal__line horizontal__line-3" src="../assets/svg/Line18.svg" alt="" />
         </div>
 
         <!-- <div class="lower__logo"> -->
