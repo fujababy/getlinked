@@ -195,7 +195,7 @@ section {
         font-family: Clash Display;
         font-size: 36px;
         font-weight: 700;
-        margin-left: -20px;
+        margin-left: -5px;
 
         @media screen and (max-width: 768px) {
           font-size: 20px;
