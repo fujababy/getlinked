@@ -179,7 +179,8 @@ section {
     border-bottom: 1px solid;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     display: none;
-    position: relative;
+    // position: relative;
+    // position: fixed;
 
     @media screen and (max-width: 768px) {
       display: block;

@@ -55,7 +55,8 @@ section {
 
     @media screen and (max-width: 820px) {
       margin: auto;
-      padding-top: 0;
+      padding-top: 20px;
+      padding-bottom: 90px;
     }
     .partners__header {
       @media screen and (max-width: 820px) {
