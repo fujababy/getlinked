@@ -74,7 +74,7 @@
   }
   .media__body {
     @media screen and (max-width: 768px) {
-      text-align: center;
+      // text-align: center;
     }
     .media__header {
       font-family: Clash Display;
