@@ -2,7 +2,7 @@
   <div>
     <div class="media">
       <div class="media__image animate-wiggle">
-        <img class="introduction-image" src="../assets/svg/The big idea.svg" alt="" />
+        <img class="introduction-image" src="../assets/svg/The-big-idea.svg" alt="" />
       </div>
 
       <div class="media__body" data-aos="fade-right" data-aos-duration="900">
