@@ -58,8 +58,9 @@
       <img
         v-if="!showMenu"
         @click="toggleShowMenu"
-        src="../assets/svg/opentoggle-icon.svg"
+        src="../assets/svg/menu-icon.svg"
         alt=""
+        id="menu-icon"
       />
       <!-- </button> -->
     </nav>
@@ -174,27 +175,30 @@ section {
   .mobile-menu {
     display: flex;
     justify-content: space-between;
-    align-items: first baseline;
+    // align-items: first baseline;
     padding: 63px 128px 25px 128px;
     border-bottom: 1px solid;
     border-bottom: 1px solid rgba(255, 255, 255, 0.18);
     display: none;
+
     // position: relative;
     // position: fixed;
 
     @media screen and (max-width: 768px) {
       display: block;
-      padding: 39px 51px;
+      padding: 37px 36px;
       display: flex;
+      align-items: first baseline;
     }
     a {
       h1 {
         font-family: Clash Display;
         font-size: 36px;
         font-weight: 700;
+        margin-left: -20px;
 
         @media screen and (max-width: 768px) {
-          font-size: 14px;
+          font-size: 20px;
         }
       }
     }
@@ -202,12 +206,14 @@ section {
     .nav-modal {
       margin-left: -130px;
       // margin-top: 40px;
+
       ul {
         font-size: 16px;
         font-weight: 400;
         display: flex;
         justify-content: space-between;
         flex-direction: row;
+
         gap: 56px;
         li {
         }
@@ -222,6 +228,10 @@ section {
         //   color: linear-gradient(270deg, #903aff 0%, #d434fe 56.42%, #ff26b9 99.99%, #fe34b9 100%);
         // }
       }
+    }
+
+    #menu-icon {
+      width: 29px;
     }
   }
 }
