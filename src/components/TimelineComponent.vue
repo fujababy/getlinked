@@ -185,7 +185,7 @@
           <p class="header--text">Interested Participants are no longer Allowed to register</p>
         </div>
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>3</span>
           </div>
