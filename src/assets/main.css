@@ -1,3 +1,6 @@
 @import './base.css';
 
 /* @import 'dist/_include-media.scss'; */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
