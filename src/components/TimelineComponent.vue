@@ -1,135 +1,5 @@
 <template>
   <div>
-    <!-- <section class="timeline">
-      <div class="timeline__block">
-        <div class="timeline__header">
-          <h2>Timeline</h2>
-          <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
-        </div>
-      
-        <div class="timeline__body">
-          <div class="flex__item-1 flex__align">
-            <h3>Hackathon Announcement</h3>
-            <p>
-              The getlinked tech hackathon 1.0 is formally announced to the general public and teams
-              begin to get ready to register
-            </p>
-          </div>
-
-          <div class="flex__item-2">
-            <img class="first__line" src="../assets/svg/Line 3.svg" alt="" />
-            <div class="number-container">
-              <span>1</span>
-            </div>
-          </div>
-
-          <div class="flex__item-3">
-            <p>November 18, 2023</p>
-          </div>
-        </div>
-       
-        <div class="timeline__body">
-          <div class="flex__item-3 flex__align">
-            <p>November 18, 2023</p>
-          </div>
-          <div class="flex__item-2">
-            <img class="line-3" src="../assets/svg/Line 4.svg" alt="" />
-            <div class="number-container">
-              <span>2</span>
-            </div>
-          </div>
-
-          <div class="flex__item-1">
-            <h3>Teams Registration begins</h3>
-            <p>
-              Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023
-              by proceeding to register
-            </p>
-          </div>
-        </div>
-      
-        <div class="timeline__body">
-          <div class="flex__item-3 flex__align">
-            <p>November 18, 2023</p>
-          </div>
-          <div class="flex__item-2">
-            <img class="line-3" src="../assets/svg/Line 4.svg" alt="" />
-            <div class="number-container">
-              <span>2</span>
-            </div>
-          </div>
-
-          <div class="flex__item-1">
-            <h3>Teams Registration begins</h3>
-            <p>
-              Interested teams can now show their interest in the getlinked tech hackathon 1.0 2023
-              by proceeding to register
-            </p>
-          </div>
-        </div>
-       
-        <div class="timeline__body">
-          <div class="flex__item-3 flex__align">
-            <p>November 18, 2023</p>
-          </div>
-
-          <div class="flex__item-2">
-            <img class="line-3" src="../assets/svg/Line 4.svg" alt="" />
-            <div class="number-container">
-              <span>4</span>
-            </div>
-          </div>
-
-          <div class="flex__item-1">
-            <h3>Announcement of the accepted teams and ideas</h3>
-            <p>
-              All teams whom idea has been accepted into getlinked tech hackathon 1.0 2023 are
-              formally announced
-            </p>
-          </div>
-        </div>
-    
-        <div class="timeline__body">
-          <div class="flex__item-1 flex__align">
-            <h3>Getlinked Hackathon 1.0 Offically Begins</h3>
-            <p>
-              Accepted teams can now proceed to build their ground breaking skill driven solutions
-            </p>
-          </div>
-
-          <div class="flex__item-2">
-            <img class="line-3" src="../assets/svg/Line 4.svg" alt="" />
-            <div class="number-container">
-              <span>5</span>
-            </div>
-          </div>
-
-          <div class="flex__item-3">
-            <p>November 18, 2023</p>
-          </div>
-        </div>
-      
-        <div class="timeline__body">
-          <div class="flex__item-3 flex__align">
-            <p>November 18, 2023</p>
-          </div>
-          <div class="flex__item-2">
-            <img class="line-3" src="../assets/svg/Line 4.svg" alt="" />
-            <div class="number-container">
-              <span>6</span>
-            </div>
-          </div>
-
-          <div class="flex__item-1">
-            <h3>Demo Day</h3>
-            <p>
-              Teams get the opportunity to pitch their projects to judges. The winner of the
-              hackathon will also be announced on this day
-            </p>
-          </div>
-        </div>
-      </div>
-    </section> -->
     <header>
       <h1>Timeline</h1>
       <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
@@ -145,7 +15,7 @@
           </p>
         </div>
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>1</span>
           </div>
@@ -163,7 +33,7 @@
         </div>
 
         <div class="flex--two">
-          <img src="../assets/svg/Line 3.svg" alt="" />
+          <img src="../assets/svg/Line3.svg" alt="" />
           <div class="desktop-number-container">
             <span>2</span>
           </div>
