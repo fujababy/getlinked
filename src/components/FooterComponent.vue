@@ -57,10 +57,10 @@
         </div>
       </section>
 
-      <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+      <!-- <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
       <img class="absolute__items-2" src="../assets/icons/star (1).svg" alt="" />
       <img class="absolute__items-3" src="../assets/icons/star (2).svg" alt="" />
-      <img class="absolute__items-4" src="../assets/icons/sata gra.svg" alt="" />
+      <img class="absolute__items-4" src="../assets/icons/sata gra.svg" alt="" /> -->
     </footer>
     <h4 class="all__rights">All rights reserved. &copy getlinked Ltd.</h4>
   </div>
