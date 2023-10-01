@@ -44,6 +44,8 @@
   border-left: 0;
   border-right: 0;
   height: auto;
+  padding-top: 62px;
+  padding-bottom: 78px;
 
   @media screen and (max-width: 992px) {
     flex-direction: column;

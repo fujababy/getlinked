@@ -83,13 +83,13 @@
         font-weight: 700;
         font-family: 'Clash Display';
         width: 300px;
-        margin: auto;
+        // margin: auto;
 
         @media screen and (max-width: 768px) {
           font-size: 20px;
         }
         .color-purple {
-          color: #d434fe;
+          // color: #d434fe;
         }
         margin-bottom: 17px;
       }
