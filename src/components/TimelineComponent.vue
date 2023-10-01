@@ -134,7 +134,7 @@
     <section>
       <header></header>
 
-      <div class="mobile--header">
+      <div class="mobile--header" data-aos="fade-left" data-aos-duration="900">
         <h1>Timeline</h1>
         <p>Here is the breakdown of the time we anticipate using for the upcoming event.</p>
       </div>

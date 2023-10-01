@@ -15,7 +15,12 @@
       </picture>
     </div>
 
-    <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-four" />
+    <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-nine" />
+
+    <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+    <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+    <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+    <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
   </section>
 </template>
 
@@ -23,9 +28,10 @@
 
 <style lang="scss" scoped>
 section {
+  position: relative;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
   border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-  position: relative;
+  overflow: hidden;
   header {
     margin-top: 72px;
 

@@ -190,6 +190,19 @@ a {
   background-blend-mode: hard-light;
   /* overflow-x: visible; */
 }
+.blur-nine {
+  position: absolute;
+  top: 200px;
+  z-index: -2;
+  left: 70px;
+  filter: blur(130px);
+  width: 600px;
+  height: 300px;
+  /* z-index: 1; */
+  background: #2b1170;
+  background-blend-mode: hard-light;
+  /* overflow-x: visible; */
+}
 
 /* width */
 ::-webkit-scrollbar {

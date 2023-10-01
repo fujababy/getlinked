@@ -48,6 +48,12 @@
     </div>
 
     <img class="privacy-image" src="../assets/svg/policy-2x-d00ce42a.png" alt="" />
+
+    <!--  -->
+    <img class="absolute__items-1" src="../assets/icons/star.svg" alt="" />
+    <img class="absolute__items-2" src="../assets/icons/star1.svg" alt="" />
+    <img class="absolute__items-3" src="../assets/icons/star2.svg" alt="" />
+    <img class="absolute__items-4" src="../assets/icons/satagra.svg" alt="" />
   </section>
 </template>
 
@@ -77,6 +83,7 @@
     .privacy__and__terms-heading {
       @media screen and (max-width: 820px) {
         text-align: center;
+        margin: auto;
       }
       h1 {
         font-size: 32px;
@@ -87,9 +94,11 @@
 
         @media screen and (max-width: 768px) {
           font-size: 20px;
+          text-align: center;
+          margin: auto;
         }
         .color-purple {
-          // color: #d434fe;
+          color: #d434fe;
         }
         margin-bottom: 17px;
       }
