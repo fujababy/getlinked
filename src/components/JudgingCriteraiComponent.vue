@@ -1,11 +1,7 @@
 <template>
   <div class="media media-height">
     <div class="media__image" data-aos="fade-up" data-aos-duration="900">
-      <img
-        class="judging-image"
-        src="../assets/svg/.svg"
-        alt=""
-      />
+      <img class="judging-image" src="../assets/svg/judge.svg" alt="" />
     </div>
     <div class="media__body">
       <h2 class="media__header judging-width">
