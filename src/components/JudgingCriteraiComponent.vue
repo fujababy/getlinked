@@ -84,7 +84,7 @@
     }
   }
   .media__body {
-    width: 100%;
+    // width: 100%;
     @media screen and (max-width: 768px) {
       text-align: center;
     }

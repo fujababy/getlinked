@@ -42,11 +42,7 @@
 
         <div class="hero__media">
           <picture>
-            <img
-              class="hero__image animate-pulse"
-              src="../assets/svg/hackathon-guy-2x-c32b4b8efred.png"
-              alt=""
-            />
+            <img class="hero__image animate-pulse" src="../assets/svg/Hackathonguy.svg" alt="" />
           </picture>
         </div>
       </div>
@@ -113,7 +109,7 @@
     }
     .hero__text {
       position: relative;
-      padding-left: 128px;
+      padding-left: 88px;
       width: 100%;
 
       @media screen and (max-width: 768px) {
