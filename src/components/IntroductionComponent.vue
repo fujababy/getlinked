@@ -2,7 +2,7 @@
   <div>
     <div class="media">
       <div class="media__image animate-wiggle">
-        <img class="introduction-image" src="../assets/svg/The-big-idea.svg" alt="" />
+        <img class="introduction-image" src="../assets/svg/The-big-idea.webp" alt="" />
         <img class="arrow" src="../assets/svg/arrow.svg" alt="" />
       </div>
 

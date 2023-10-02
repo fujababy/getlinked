@@ -42,7 +42,11 @@
 
         <div class="hero__media">
           <picture>
-            <img class="hero__image animate-pulse" src="../assets/svg/Hackathonguy.svg" alt="" />
+            <img
+              class="hero__image animate-pulse"
+              src="../assets/svg/hackathon-guy-2x-c32b4b8efred.png"
+              alt=""
+            />
           </picture>
         </div>
       </div>
@@ -200,9 +204,15 @@
       .time {
         display: flex;
         font-family: unica one;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 30px;
         padding-top: 77px;
+
+        @media screen and (max-width: 768px) {
+          padding-top: 14px;
+          display: flex;
+          justify-content: center;
+        }
         .hour {
           font-size: 64px;
         }

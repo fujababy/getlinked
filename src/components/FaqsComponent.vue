@@ -1,7 +1,7 @@
 <template>
   <div id="faq" class="media faq-height">
     <div class="media__image faq-order">
-      <img class="faq-image animate-pulse" src="../assets/svg/faq-2x-d4445af6.png" alt="" />
+      <img class="faq-image animate-pulse" src="../assets/svg/faq-2x-d4445af6.webp" alt="" />
     </div>
 
     <div class="media__body">

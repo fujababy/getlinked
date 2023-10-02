@@ -60,6 +60,8 @@
   border-left: 0;
   padding-top: 80px;
   padding-bottom: 100px;
+  padding-left: 66px;
+  padding-right: 66px;
   //   height: 617px;
 
   @media screen and (max-width: 820px) {
@@ -74,14 +76,15 @@
   }
 
   .media__image {
+    width: 100%;
     .judging-image {
       @media screen and (max-width: 768px) {
-        width: 100%;
         // height: 275px;
       }
     }
   }
   .media__body {
+    width: 100%;
     @media screen and (max-width: 768px) {
       text-align: center;
     }

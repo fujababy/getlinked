@@ -4,7 +4,7 @@
       <div class="flex__item-1">
         <h1 class="form__header animate-pulse">Register</h1>
         <figure>
-          <img src="../assets/svg/register-image.svg " alt="" />
+          <img src="../assets/svg/register-image (1).webp" alt="" />
         </figure>
       </div>
 

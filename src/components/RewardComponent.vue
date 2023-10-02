@@ -7,7 +7,7 @@
 
     <div class="block">
       <picture class="animate-ping">
-        <img src="../assets/svg/94868891.svg" alt="" />
+        <img src="../assets/svg/94868891.png" alt="" />
       </picture>
 
       <picture>

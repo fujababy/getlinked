@@ -15,7 +15,7 @@
     </div>
 
     <div class="media__image">
-      <img class="rules-image" src="../assets/svg/girl.svg" alt="" />
+      <img class="rules-image" src="../assets/svg/girll.webp" alt="" />
     </div>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
@@ -83,6 +83,12 @@
         font-size: 12px;
         padding-bottom: 46px;
       }
+    }
+  }
+
+  .media__image {
+    .rules__image {
+      width: 100%;
     }
   }
 }
