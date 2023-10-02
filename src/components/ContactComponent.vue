@@ -317,8 +317,8 @@ export default {
         padding: 75px 90px 67px 90px;
 
         @media screen and (max-width: 768px) {
-          padding-left: 49px;
-          padding-right: 49px;
+          padding-left: 30px;
+          padding-right: 30px;
           margin: auto;
           background: none;
         }
@@ -364,7 +364,7 @@ export default {
           width: 100%;
 
           input {
-            padding: 13px 0 14px 29px;
+            padding: 15px 20px;
             // max-width: 437px;
             width: 100%;
             border-radius: 4px;

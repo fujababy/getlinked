@@ -18,7 +18,9 @@
         <h2 class="flex__two--heading">Useful Links</h2>
         <ul>
           <li>Overview</li>
-          <li>Timeline</li>
+          <a href="/">
+            <li>Timeline</li>
+          </a>
           <li>FAQs</li>
           <router-link :to="{ name: 'Register' }">
             <li>Register</li>

@@ -100,7 +100,7 @@
       padding-left: 128px;
 
       @media screen and (max-width: 768px) {
-        padding-left: 33px;
+        padding-left: 58px;
         padding-right: 58px;
       }
 
@@ -136,6 +136,7 @@
         }
       }
       .hero__btn {
+        text-align: center;
       }
 
       .hero__icons {

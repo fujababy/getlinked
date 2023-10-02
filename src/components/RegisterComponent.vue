@@ -281,7 +281,7 @@ export default {
           background: none;
           padding: 0;
           width: 100%;
-          padding: 0 66px;
+          padding: 0 30px;
         }
 
         .form__header {
@@ -349,7 +349,7 @@ export default {
               font-size: 14px;
             }
             input {
-              padding: 15px 25px;
+              padding: 15px 20px;
               // width: 437px;
               border-radius: 4px;
               border: 1px solid #fff;
@@ -365,7 +365,7 @@ export default {
             }
 
             select {
-              padding: 15px 25px;
+              padding: 15px 20px;
               border-radius: 4px;
               border: 1px solid #fff;
               background: rgba(255, 255, 255, 0.03);
