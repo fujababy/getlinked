@@ -13,4 +13,5 @@ import { RouterLink, RouterView } from 'vue-router'
   font-family: 'Clash Display';
   src: url('../assets/fonts/ClashDisplay-Regular.ttf') format('truetype');
 } */
+@import url('https://fonts.googleapis.com/css2?family=Unica+One&display=swap');
 </style>

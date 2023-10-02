@@ -21,6 +21,18 @@
             <button class="btn hero__btn">Register</button>
           </router-link>
 
+          <div class="time">
+            <div class="hour">
+              <p class="">00<span class="sub--hour">H</span></p>
+            </div>
+            <div>
+              <p class="hour">00<span class="sub--hour">M</span></p>
+            </div>
+            <div>
+              <p class="hour">00<span class="sub--hour">S</span></p>
+            </div>
+          </div>
+
           <!-- <div class="hero__icons"> -->
           <img class="bulb-icon" src="../assets/svg/Creative1.svg" alt="" />
           <img class="chain-icon" src="../assets/svg/chain-9365116-7621444.svg" alt="" />
@@ -98,6 +110,7 @@
     .hero__text {
       position: relative;
       padding-left: 128px;
+      width: 100%;
 
       @media screen and (max-width: 768px) {
         padding-left: 58px;
@@ -107,6 +120,7 @@
       .hero__heading {
         max-width: 722px;
         font-family: Clash Display;
+
         font-size: 80px;
         margin-bottom: 8px;
         font-weight: 700;
@@ -147,7 +161,7 @@
       .bulb-icon {
         position: absolute;
         top: -45px;
-        right: 220px;
+        right: 200px;
 
         @media screen and (max-width: 768px) {
           width: 18px;
@@ -159,36 +173,59 @@
 
       .chain-icon {
         position: absolute;
-        right: 170px;
+        right: 150px;
         top: 130px;
 
-        @media screen and (max-width: 768px) {
-          width: 32.797px;
-          height: 32.797px;
-          right: 60px;
-          top: 95px;
+        @media screen and (max-width: 992px) {
+          // width: 32.797px;
+          // height: 32.797px;
+          // right: 60px;
+          // top: 95px;
+          display: none;
         }
       }
 
       .smash-icon {
         position: absolute;
-        top: 100px;
-        right: 35px;
+        top: 145px;
+        right: 85px;
 
+        @media screen and (max-width: 992px) {
+          // width: 22.119px;
+          // height: 22.119px;
+          display: none;
+        }
+      }
+
+      .time {
+        display: flex;
+        font-family: unica one;
+        justify-content: center;
+        gap: 30px;
+        padding-top: 77px;
+        .hour {
+          font-size: 64px;
+        }
+
+        .sub--hour {
+          font-size: 14px;
+        }
         @media screen and (max-width: 768px) {
-          width: 22.119px;
-          height: 22.119px;
+          padding-top: 14px;
         }
       }
     }
 
-    .hero__image {
-      //   max-width: 667px;
-      height: 715px;
+    .hero__media {
+      width: 100%;
+      .hero__image {
+        //   max-width: 667px;
+        height: 715px;
 
-      @media screen and (max-width: 768px) {
-        width: 100%;
-        height: 362.395px;
+        @media screen and (max-width: 768px) {
+          width: 100%;
+          height: 362.395px;
+        }
       }
     }
   }
