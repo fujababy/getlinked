@@ -76,7 +76,7 @@
   }
 
   .media__image {
-    width: 100%;
+    // width: 100%;
     .judging-image {
       @media screen and (max-width: 768px) {
         // height: 275px;
