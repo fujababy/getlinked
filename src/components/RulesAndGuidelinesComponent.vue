@@ -32,7 +32,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  //   gap: 10rem;
+  gap: 10rem;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top: none;
   border-right: 0;

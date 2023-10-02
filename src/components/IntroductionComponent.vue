@@ -3,6 +3,7 @@
     <div class="media">
       <div class="media__image animate-wiggle">
         <img class="introduction-image" src="../assets/svg/The-big-idea.svg" alt="" />
+        <img class="arrow" src="../assets/svg/arrow.svg" alt="" />
       </div>
 
       <div class="media__body" data-aos="fade-right" data-aos-duration="900">
@@ -38,7 +39,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10rem;
+  gap: 109px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-top: none;
   border-left: 0;
@@ -58,26 +59,39 @@
     padding-bottom: 40px;
   }
 
-  @keyframes wiggle {
-    0%,
-    100% {
-      transform: rotate(-5deg);
-    }
-    50% {
-      transform: rotate(5deg);
-    }
-  }
-
   .media__image {
+    position: relative;
+    animation-iteration-count: infinite;
+    animation-name: wiggle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
     .introduction-image {
       max-width: 490px;
-      animation-iteration-count: infinite;
-      animation-name: wiggle;
-      animation-duration: 2s;
-      animation-timing-function: ease-in-out;
 
       @media screen and (max-width: 768px) {
         width: 264px;
+      }
+    }
+
+    .arrow {
+      position: absolute;
+      right: 0;
+      animation-iteration-count: infinite;
+      animation-name: wiggle;
+      animation-duration: 1s;
+      // animation-timing-function: ease-in-out;
+      @media screen and (max-width: 768px) {
+        width: 29.456px;
+      }
+    }
+
+    @keyframes wiggle {
+      0%,
+      100% {
+        transform: rotate(-5deg);
+      }
+      50% {
+        transform: rotate(5deg);
       }
     }
   }
