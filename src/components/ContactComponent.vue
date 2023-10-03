@@ -85,7 +85,7 @@
             <ErrorMessage class="error" name="message" />
           </div>
           <div class="btn-container">
-            <button class="btn submit-btn">Submit</button>
+            <button @click="notify" class="btn submit-btn">Submit</button>
           </div>
 
           <div class="textandicon">
@@ -126,6 +126,9 @@
 <script>
 import { Form, Field, ErrorMessage } from 'vee-validate'
 import axios from '../utils/axios'
+import { toast } from 'vue3-toastify'
+
+import 'vue3-toastify/dist/index.css'
 
 export default {
   name: 'ContactForm',
@@ -133,6 +136,15 @@ export default {
     Form,
     Field,
     ErrorMessage
+  },
+
+  setup() {
+    const notify = () => {
+      toast('Thanks for your feedback!', {
+        autoClose: 2000
+      }) // ToastOptions
+    }
+    return { notify }
   },
 
   data() {

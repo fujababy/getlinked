@@ -1,29 +1,31 @@
 <template>
   <section>
-    <nav class="desktop-view">
-      <a href="/">
-        <h1>get<span class="color-purple">linked</span></h1>
-      </a>
-      <div>
-        <ul>
-          <router-link :to="{ name: '' }">
-            <li class="nav-item me-5"><span class="nav-link">Timeline</span></li>
-          </router-link>
-          <router-link :to="{ name: '' }">
-            <li class="nav-item me-5"><span class="nav-link">Overview</span></li>
-          </router-link>
-          <router-link :to="{ name: '' }">
-            <li class="nav-item me-5"><span class="nav-link">FAQs</span></li>
-          </router-link>
-          <router-link :to="{ name: 'Contact' }">
-            <li class="nav-item me-5"><span class="nav-link">Contact</span></li>
-          </router-link>
-        </ul>
-      </div>
+    <nav>
+      <div class="desktop-view">
+        <a href="/">
+          <h1>get<span class="color-purple">linked</span></h1>
+        </a>
+        <div>
+          <ul>
+            <router-link :to="{ name: '' }">
+              <li class="nav-item me-5"><span class="nav-link">Timeline</span></li>
+            </router-link>
+            <router-link :to="{ name: '' }">
+              <li class="nav-item me-5"><span class="nav-link">Overview</span></li>
+            </router-link>
+            <router-link :to="{ name: '' }">
+              <li class="nav-item me-5"><span class="nav-link">FAQs</span></li>
+            </router-link>
+            <router-link :to="{ name: 'Contact' }">
+              <li class="nav-item me-5"><span class="nav-link">Contact</span></li>
+            </router-link>
+          </ul>
+        </div>
 
-      <router-link :to="{ name: 'Register' }">
-        <button class="btn">Register</button>
-      </router-link>
+        <router-link :to="{ name: 'Register' }">
+          <button class="btn">Register</button>
+        </router-link>
+      </div>
     </nav>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
@@ -131,44 +133,46 @@ section {
   //     }
   //   }
   // }
+  nav {
+    .desktop-view {
+      position: fixed;
+      background: #150e28;
 
-  .desktop-view {
-    position: fixed;
-    background: #150e28;
-
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 15px;
-    padding: 53px 128px 25px 128px;
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.18);
-    // display: none;
-
-    @media screen and (max-width: 768px) {
-      display: none;
-    }
-
-    a {
-      h1 {
-        font-family: Clash Display;
-        font-size: 3.6rem;
-        font-weight: 700;
-      }
-    }
-    ul {
-      font-size: 16px;
-      font-weight: 400;
+      top: 0;
+      width: 100%;
+      z-index: 1;
       display: flex;
       justify-content: space-between;
-      flex-direction: row;
-      gap: 56px;
-      li {
-        //   margin-right: 56px;
-        cursor: pointer;
+      align-items: center;
+      gap: 15px;
+
+      padding: 53px 128px 25px 128px;
+
+      border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+      // display: none;
+
+      @media screen and (max-width: 1024px) {
+        display: none;
+      }
+
+      a {
+        h1 {
+          font-family: Clash Display;
+          font-size: 3.6rem;
+          font-weight: 700;
+        }
+      }
+      ul {
+        font-size: 16px;
+        font-weight: 400;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+        gap: 56px;
+        li {
+          // margin-right: 56px;
+          cursor: pointer;
+        }
       }
     }
   }
@@ -185,7 +189,7 @@ section {
     // position: relative;
     // position: fixed;
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 1024px) {
       display: block;
       padding: 37px 36px;
       display: flex;

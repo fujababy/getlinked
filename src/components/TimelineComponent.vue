@@ -444,7 +444,8 @@ section {
 
         :nth-child(2) {
           font-size: 12px;
-          max-width: 276px;
+          // max-width: 276px;
+          width: 100%;
           font-weight: 400;
           line-height: 159.9%;
           margin-bottom: 3px;

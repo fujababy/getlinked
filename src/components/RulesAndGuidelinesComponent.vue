@@ -88,7 +88,6 @@
 
   .media__image {
     .rules__image {
-      width: 100%;
     }
   }
 }

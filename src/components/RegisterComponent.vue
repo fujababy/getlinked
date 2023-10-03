@@ -106,7 +106,7 @@
           </div>
 
           <div class="btn-container">
-            <button class="btn btn-register">Register Now</button>
+            <button @click="open" class="btn btn-register">Register Now</button>
           </div>
         </Form>
       </div>
@@ -114,6 +114,8 @@
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-two" />
+
+    <button>Show toast</button>
   </section>
 </template>
 
@@ -220,6 +222,16 @@ export default {
           console.log(response)
         })
         .catch((error) => console.log(error))
+    },
+    open() {
+      this.$toast.open({
+        message: 'Registration successful',
+        type: 'success',
+        duration: 3000,
+        dismissible: true,
+        position: 'top-right',
+        pauseOnHover: true
+      })
     }
   }
 }
