@@ -1,50 +1,85 @@
 <template>
-  <section>
-    <div class="partners__block">
-      <div class="partners__header">
-        <h1 class="heading">Partners and Sponsors</h1>
-        <p class="text">
-          Getlinked Hackathon 1.0 is honored to have the following major companies as its partners
-          and sponsors
-        </p>
+  <div>
+    <section>
+      <div class="partners__block">
+        <div class="partners__header">
+          <h1 class="heading">Partners and Sponsors</h1>
+          <p class="text">
+            Getlinked Hackathon 1.0 is honored to have the following major companies as its partners
+            and sponsors
+          </p>
 
-        <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
-        <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-six" />
-      </div>
-
-      <div class="partners__body">
-        <div class="upper__logo">
-          <img src="../assets/svg/Liberty.svg" alt="" />
-          <img class="line" src="../assets/svg/Line17.svg" alt="" />
-          <img src="../assets/svg/Liberty.svg" alt="" />
-          <img class="line" src="../assets/svg/Line17.svg" alt="" />
-          <img src="../assets/svg/Winwise.svg" alt="" />
-          <img src="../assets/svg/wisper.svg" alt="" />
-          <img class="line" src="../assets/svg/Line17.svg" alt="" />
-          <img src="../assets/svg/Paybox.svg" alt="" />
-          <img class="line" src="../assets/svg/Line17.svg" alt="" />
-          <img src="../assets/svg/VuzualPlus.svg" alt="" />
-
-          <img class="horizontal__line horizontal__line-1" src="../assets/svg/Line18.svg" alt="" />
-          <img class="horizontal__line horizontal__line-2" src="../assets/svg/Line18.svg" alt="" />
-          <img class="horizontal__line horizontal__line-3" src="../assets/svg/Line18.svg" alt="" />
+          <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
+          <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-six" />
         </div>
 
-        <!-- <div class="lower__logo"> -->
+        <div class="partners__body">
+          <div class="upper__logo">
+            <img src="../assets/svg/Liberty.svg" alt="" />
+            <img class="line" src="../assets/svg/Line17.svg" alt="" />
+            <img src="../assets/svg/Liberty.svg" alt="" />
+            <img class="line" src="../assets/svg/Line17.svg" alt="" />
+            <img src="../assets/svg/Winwise.svg" alt="" />
+            <img src="../assets/svg/wisper.svg" alt="" />
+            <img class="line" src="../assets/svg/Line17.svg" alt="" />
+            <img src="../assets/svg/Paybox.svg" alt="" />
+            <img class="line" src="../assets/svg/Line17.svg" alt="" />
+            <img src="../assets/svg/VuzualPlus.svg" alt="" />
 
-        <!-- </div> -->
+            <img
+              class="horizontal__line horizontal__line-1"
+              src="../assets/svg/Line18.svg"
+              alt=""
+            />
+            <img
+              class="horizontal__line horizontal__line-2"
+              src="../assets/svg/Line18.svg"
+              alt=""
+            />
+            <img
+              class="horizontal__line horizontal__line-3"
+              src="../assets/svg/Line18.svg"
+              alt=""
+            />
+          </div>
+
+          <!-- <div class="lower__logo"> -->
+
+          <!-- </div> -->
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'ComponentName', // replace with component-name
+  data() {
+    return {
+      schema: {
+        username: 'required'
+      }
+    }
+  },
+  methods: {
+    register(values) {
+      console.log(values)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 section {
   // display: flex;
   // justify-content: center;
   // align-items: center;
+
+  vee-field {
+    padding: 3rem;
+    border: 3px solid #d434fe;
+  }
 
   .partners__block {
     position: relative;

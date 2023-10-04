@@ -1,5 +1,12 @@
 <template>
   <section class="register__page">
+    <div
+      class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 cursor-pointer"
+      v-if="reg_show_alert"
+      :class="reg_alert_variant"
+    >
+      {{ reg_alert_msg }}
+    </div>
     <div class="flex__items">
       <div class="flex__item-1">
         <h1 class="form__header animate-pulse">Register</h1>
@@ -9,7 +16,7 @@
       </div>
 
       <div class="flex__item-2">
-        <Form class="register__form" @submit="registerForm">
+        <vee-form class="register__form" :validation-schema="schema" @submit="registerForm">
           <h1 class="form__header animate-pulse">Register</h1>
           <div class="sub-heading-container">
             <p class="sub-heading-text">Be part of this movement!</p>
@@ -25,76 +32,68 @@
           <div class="first__input-container">
             <div class="input__container">
               <label for="">Team's Name</label>
-              <Field
+              <vee-field
                 id="team_name"
-                name="teamName"
+                name="team_name"
                 type="text"
                 placeholder="Enter the name of your group"
-                :rules="validateteamName"
-                v-model="formData.team_name"
               />
-              <ErrorMessage class="error" name="teamName" />
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="team_name" />
             </div>
             <div class="input__container">
               <label for="">Phone</label>
-              <Field
+              <vee-field
                 id="phone"
                 name="phone"
                 type="text"
                 placeholder="Enter your phone number"
-                :rules="validatePhone"
-                v-model="formData.phone_number"
               />
-              <ErrorMessage class="error" name="phone" />
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="phone" />
             </div>
           </div>
           <div class="first__input-container margin-top">
             <div class="input__container">
               <label for="">Email</label>
-              <Field
+              <vee-field
                 id="email"
                 name="email"
                 type="text"
                 placeholder="Enter your email address"
-                :rules="validateEmail"
-                v-model="formData.email"
               />
-              <ErrorMessage class="error" name="email" />
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="email" />
             </div>
             <div class="input__container">
               <label for="">Project Topic</label>
-              <Field
-                id="project_topic"
+              <vee-field
+                id=""
                 name="project"
                 type="text"
                 placeholder="What is your group project topic"
-                :rules="validateProject"
-                v-model="formData.project_topic"
               />
-              <ErrorMessage class="error" name="project" />
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="project" />
             </div>
           </div>
           <div class="first__input-container">
             <div class="input__container">
               <label for="">Category</label>
-              <select name="" id="">
-                <option value="saab">Select your category</option>
-                <option value="fiat">1</option>
-                <option value="audi">2</option>
-              </select>
+              <vee-field as="select" name="category" id="" class="select">
+                <option value="select">Select your category</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+              </vee-field>
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="category" />
             </div>
             <div class="input__container">
               <label for="">Group Size</label>
-              <select name="" id="">
-                <option value="saab">Select</option>
-                <option value="fiat">1</option>
-                <option value="audi">10</option>
-                <option value="audi">50</option>
-              </select>
+              <vee-field as="select" class="select" name="group">
+                <option value="select">Select</option>
+                <option value="1">1</option>
+                <option value="10">10</option>
+                <option value="50">50</option>
+              </vee-field>
+              <ErrorMessage class="text-red-500 mt-2 text-lg block" name="group" />
             </div>
           </div>
-
-          <label for="Category"> </label>
 
           <div class="please__container">
             <span class="review">Please review your registration details before submitting</span>
@@ -106,29 +105,22 @@
           </div>
 
           <div class="btn-container">
-            <button @click="open" class="btn btn-register">Register Now</button>
+            <button class="btn btn-register">Register Now</button>
           </div>
-        </Form>
+        </vee-form>
       </div>
     </div>
 
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-two" />
-
-    <button>Show toast</button>
   </section>
 </template>
 
 <script>
-import { Form, Field, ErrorMessage } from 'vee-validate'
 import axios from '../utils/axios'
 
 export default {
-  components: {
-    Form,
-    Field,
-    ErrorMessage
-  },
+  components: {},
 
   data() {
     return {
@@ -140,71 +132,37 @@ export default {
         project_topic: '',
         category: 1,
         privacy_policy_accepted: true
-      }
+      },
+      schema: {
+        team_name: 'required|min:3|max:100|alpha_spaces',
+        phone: 'required|min:11|max:15|',
+        email: 'required|min:3|max:100|email',
+        project: 'required|min:3|max:100|',
+        category: 'required',
+        group: 'required'
+      },
+      reg_in_submission: false,
+      reg_show_alert: false,
+      reg_alert_variant: 'bg-blue-500',
+      reg_alert_message: 'Please wait! Account is being registered.'
     }
   },
 
   methods: {
     onSubmit(values) {
-      console.log(JSON.stringify(values, null, 2))
-    },
-    validateteamName(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required!'
-      }
-
-      // if the field is not a valid email
-      // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      // if (!regex.test(value)) {
-      //   return 'This field must be a valid Email!'
-      // }
-      // All is good
-      return true
-    },
-    validatePhone(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required!'
-      }
-
-      // if the field is not a valid email
-      // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      // if (!regex.test(value)) {
-      //   return 'Your name can only be Aphanumeric!'
-      // }
-      // All is good
-      return true
+      console.log(values)
     },
 
-    validateEmail(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required!'
-      }
-
-      // if the field is not a valid email
-      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      if (!regex.test(value)) {
-        return 'Your name can only be Aphanumeric!'
-      }
-      // All is good
-      return true
+    register(values) {
+      this.reg_show_alert = true
+      this.reg_in_submission = true
+      this.reg_alert_variant = 'bg-indigo-500'
+      this.reg_alert_msg = 'Please wait! Your account is being created.'
+      this.reg_alert_variant = 'bg-green-500'
+      this.reg_alert_msg = 'Thank You! Your Message has been delivered.'
+      console.log(values)
     },
-    validateProject(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required!'
-      }
 
-      // if the field is not a valid email
-      // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      // if (!regex.test(value)) {
-      //   return 'Your name can only be Aphanumeric!'
-      // }
-      // All is good
-      return true
-    },
     // api call
     registerForm() {
       axios
@@ -222,16 +180,6 @@ export default {
           console.log(response)
         })
         .catch((error) => console.log(error))
-    },
-    open() {
-      this.$toast.open({
-        message: 'Registration successful',
-        type: 'success',
-        duration: 3000,
-        dismissible: true,
-        position: 'top-right',
-        pauseOnHover: true
-      })
     }
   }
 }
@@ -382,18 +330,30 @@ export default {
               border: 1px solid #fff;
               background: rgba(255, 255, 255, 0.03);
               box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-              color: #ffffff;
+              // color: #ffffff;
               font-size: 16px;
               background-image: none;
-              width: 250px;
+              width: 237px;
 
               @media screen and (max-width: 820px) {
                 width: 100%;
               }
             }
 
+            select option {
+              background: rgba(255, 255, 255, 0.03);
+              box-shadow: 0px 4px 4px 0px #00000040;
+              // color: #ffffff;
+              font-size: 16px;
+              background-image: none;
+              width: 100%;
+            }
+
+            option:not(:checked) {
+              background: #d434fe;
+              width: 100%;
+            }
             .select:active {
-              background: #000;
             }
 
             ::placeholder {

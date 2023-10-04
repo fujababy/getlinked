@@ -42,7 +42,7 @@
 
         <div class="hero__media">
           <picture>
-            <img class="hero__image animate-pulse" src="../assets/svg/Hackathonguy.svg" alt="" />
+            <img class="hero__image animate-pulse" src="../assets/svg/HackathonNew.webp" alt="" />
           </picture>
         </div>
       </div>
@@ -224,6 +224,7 @@
 
     .hero__media {
       width: 100%;
+
       .hero__image {
         //   max-width: 667px;
         height: 715px;

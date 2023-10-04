@@ -29,91 +29,81 @@
               <img src="../assets/icons/linkdn.svg" alt="" />
             </span>
           </div>
-
-          <!-- icons -->
         </div>
       </div>
 
       <div class="flex__two">
-        <Form @submit="contactForm">
-          <h1 class="form__header">Questions or need assistance?</h1>
-          <p class="form__sub--header">Let us know about it!</p>
-          <p class="form__sub--herder-two">Email us below to any question related to our event</p>
+        <div
+          class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 rounded-full cursor-pointer"
+          v-if="reg_show_alert"
+          :class="reg_alert_variant"
+        >
+          {{ reg_alert_msg }}
+        </div>
+        <div>
+          <vee-form :validation-schema="schema" class="form" @submit="contactForm">
+            <!--alert message-->
 
-          <div class="custom__input">
-            <Field
-              id="first_name"
-              name="name"
-              placeholder="First Name"
-              :rules="validateName"
-              v-model="formData.first_name"
-            />
-            <ErrorMessage class="error" name="name" />
-          </div>
-          <div class="custom__input">
-            <Field
-              id="phone"
-              name="phone"
-              placeholder="Phone"
-              :rules="validatePhone"
-              v-model="formData.phone"
-            />
-            <ErrorMessage class="error" name="name" />
-          </div>
-          <div class="custom__input">
-            <Field
-              id="first_name"
-              name="email"
-              placeholder="Mail"
-              :rules="validateEmail"
-              v-model="formData.email"
-            />
-            <ErrorMessage class="error" name="email" />
-          </div>
-          <div class="message">
-            <Field
-              id="message"
-              as="textarea"
-              name="message"
-              placeholder="Message"
-              :rules="validateMessage"
-              cols="30"
-              rows="10"
-              v-model="formData.message"
-            />
-
-            <ErrorMessage class="error" name="message" />
-          </div>
-          <div class="btn-container">
-            <button @click="notify" class="btn submit-btn">Submit</button>
-          </div>
-
-          <div class="textandicon">
-            <p class="color-purple">Share on</p>
-            <div class="icon-container animate-bounce">
-              <span class="icon">
-                <img src="../assets/icons/instagram-icon.svg" alt="" />
-              </span>
-              <span class="icon">
-                <img src="../assets/icons/twitter-icon.svg" alt="" />
-              </span>
-              <span class="icon">
-                <img src="../assets/icons/facebook-icon.svg" alt="" />
-              </span>
-              <span class="icon">
-                <img src="../assets/icons/linkdn.svg" alt="" />
-              </span>
+            <h1 class="form__header">Questions or need assistance?</h1>
+            <p class="form__sub--header">Let us know about it!</p>
+            <p class="form__sub--herder-two">Email us below to any question related to our event</p>
+            <!-- first name -->
+            <div class="custom__input">
+              <vee-field
+                name="first_name"
+                id="first_name"
+                type="text"
+                placeholder="First Name"
+                v-model="formData.first_name"
+              />
+              <ErrorMessage class="text-red-500 mt-2 text-lg" name="first_name" />
             </div>
-          </div>
-        </Form>
+            <!-- phone -->
+            <div class="custom__input">
+              <vee-field
+                name="email"
+                id="email"
+                type="text]"
+                placeholder="Email"
+                v-model="formData.email"
+              />
+              <ErrorMessage class="text-red-500 mt-2 text-lg" name="email" />
+            </div>
+            <!-- email -->
+            <div class="custom__input">
+              <vee-field
+                name="phone_number"
+                id="phone_number"
+                type="number"
+                placeholder="Phone Number"
+                v-model="formData.phone_number"
+              />
+              <ErrorMessage class="text-red-500 mt-2 text-lg" name="phone_number" />
+            </div>
+            <!-- message -->
+            <div class="message">
+              <vee-field
+                as="textarea"
+                name="message"
+                id="message"
+                type="text"
+                placeholder="Message"
+                v-model="formData.message"
+              />
+              <ErrorMessage class="text-red-500 mt-2 text-lg" name="message" />
+            </div>
+            <div class="btn-container">
+              <button class="btn submit-btn" :disabled="reg_in_submission" value="Create account">
+                Submit
+              </button>
+            </div>
+          </vee-form>
+        </div>
       </div>
-      <!-- 
-      <img class="ecllipse-1" src="../assets/svg/contact-Purple-Lens-Flare-PNG.svg" alt="" /> -->
     </div>
 
     <div class="icon__and___text"></div>
 
-    <!-- purple blur flare -->
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-one animate-pulse" />
     <img src="../assets/svg/Purple-Lens-Flare.svg" alt="" class="blur-two" />
 
@@ -124,28 +114,21 @@
   </section>
 </template>
 <script>
-import { Form, Field, ErrorMessage } from 'vee-validate'
 import axios from '../utils/axios'
-import { toast } from 'vue3-toastify'
-
-import 'vue3-toastify/dist/index.css'
 
 export default {
-  name: 'ContactForm',
-  components: {
-    Form,
-    Field,
-    ErrorMessage
-  },
-
-  setup() {
-    const notify = () => {
-      toast('Thanks for your feedback!', {
-        autoClose: 2000
-      }) // ToastOptions
-    }
-    return { notify }
-  },
+  name: 'contactForm',
+  // open() {
+  //   this.$toast.open({
+  //     message: 'Registration successful',
+  //     type: 'success',
+  //     duration: 3000,
+  //     dismissible: true,
+  //     position: 'top-right',
+  //     pauseOnHover: true
+  //   })
+  // },
+  components: {},
 
   data() {
     return {
@@ -154,56 +137,35 @@ export default {
         email: '',
         phone_number: '',
         message: ''
-      }
+      },
+      schema: {
+        first_name: 'required|min:3|max:100|alpha_spaces',
+        phone_number: 'required|min:11|max:15|',
+        email: 'required|min:3|max:100|email',
+        message: 'required|min:3|max:100|'
+      },
+      reg_in_submission: false,
+      reg_show_alert: false,
+      reg_alert_variant: 'bg-indigo-500',
+      reg_alert_message: 'Please wait! Account is being registered.'
     }
   },
 
   methods: {
-    onSubmit(values) {
-      console.log(JSON.stringify(values, null, 2))
+    register(values) {
+      console.log(values)
     },
-    validateEmail(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required'
-      }
 
-      // if the field is not a valid email
-      const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      if (!regex.test(value)) {
-        return 'This field must be a valid Email!'
-      }
-      // All is good
-      return true
+    register(values) {
+      this.reg_show_alert = true
+      this.reg_in_submission = true
+      this.reg_alert_variant = 'bg-indigo-500'
+      this.reg_alert_msg = 'Please wait! Your account is being created.'
+      this.reg_alert_variant = 'bg-green-500'
+      this.reg_alert_msg = 'Thank You! Your Message has been delivered.'
+      console.log(values)
     },
-    validateName(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required'
-      }
-      return true
-    },
-    validatePhone(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required'
-      }
-      return true
-    },
-    validateMessage(value) {
-      // if the field is empty
-      if (!value) {
-        return 'Required'
-      }
 
-      // if the field is not a valid email
-      // const regex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-      // if (!regex.test(value)) {
-      //   return 'Your name can only be Aphanumeric!'
-      // }
-      // All is good
-      return true
-    },
     // api call
     contactForm() {
       axios
@@ -229,6 +191,7 @@ export default {
   overflow: hidden;
   // width: 100%;
   // margin-top: 115px;
+
   @media screen and (max-width: 768px) {
     width: 100%;
     height: auto;
@@ -314,7 +277,7 @@ export default {
       align-items: center;
       width: 100%;
       margin-top: 115px;
-      height: 100vh;
+      height: auto;
 
       @media screen and (max-width: 768px) {
         margin-top: 0;
@@ -400,8 +363,8 @@ export default {
           font-size: 12px;
         }
         .message {
-          // display: flex;
-          // flex-direction: column;
+          display: flex;
+          flex-direction: column;
           textarea {
             padding: 13px 0 14px 29px;
             // width: 437px;
@@ -412,7 +375,8 @@ export default {
             color: #ffffff;
             font-size: 16px;
             width: 100%;
-            max-height: 110px;
+            max-height: 150px;
+            min-height: 100px;
           }
         }
 

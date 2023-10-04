@@ -23,7 +23,23 @@
   </div>
 </template>
 
-<script></script>
+<script>
+export default {
+  name: 'RulesAndGuidelinesComponent', // replace with component-name
+  data() {
+    return {
+      schema: {
+        username: 'required'
+      }
+    }
+  },
+  methods: {
+    register(values) {
+      console.log(values)
+    }
+  }
+}
+</script>
 
 <style lang="scss" scoped>
 .media {
