@@ -2,7 +2,9 @@
   <div class="block">
     <footer>
       <section class="flex__one">
-        <h1>get<span class="color-purple">linked</span></h1>
+        <a href="/">
+          <h1>get<span class="color-purple">linked</span></h1>
+        </a>
         <p class="flex__one-text">
           Getlinked Tech Hackathon is a technology innovation program established by a group of
           organizations with the aim of showcasing young and talented individuals in the field of
@@ -18,11 +20,13 @@
         <h2 class="flex__two--heading">Useful Links</h2>
         <ul>
           <li>Overview</li>
-          <a href="/">
+          <a href="/" class="cursor-pointer">
             <li>Timeline</li>
           </a>
-          <li>FAQs</li>
-          <router-link :to="{ name: 'Register' }">
+          <router-link :to="{ name: '' }" class="cursor-pointer">
+            <li>FAQs</li>
+          </router-link>
+          <router-link :to="{ name: 'Register' }" class="cursor-pointer">
             <li>Register</li>
           </router-link>
         </ul>

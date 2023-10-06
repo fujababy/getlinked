@@ -1,5 +1,13 @@
 <template>
   <section class="block">
+    <!--alert message-->
+    <div
+      class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 cursor-pointer animate-bounce"
+      v-if="reg_show_alert"
+      :class="reg_alert_variant"
+    >
+      {{ reg_alert_msg }}
+    </div>
     <div class="flex__items">
       <div class="flex__one">
         <header>
@@ -33,72 +41,61 @@
       </div>
 
       <div class="flex__two">
-        <div
-          class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 rounded-full cursor-pointer"
-          v-if="reg_show_alert"
-          :class="reg_alert_variant"
-        >
-          {{ reg_alert_msg }}
-        </div>
-        <div>
-          <vee-form :validation-schema="schema" class="form" @submit="contactForm">
-            <!--alert message-->
-
-            <h1 class="form__header">Questions or need assistance?</h1>
-            <p class="form__sub--header">Let us know about it!</p>
-            <p class="form__sub--herder-two">Email us below to any question related to our event</p>
-            <!-- first name -->
-            <div class="custom__input">
-              <vee-field
-                name="first_name"
-                id="first_name"
-                type="text"
-                placeholder="First Name"
-                v-model="formData.first_name"
-              />
-              <ErrorMessage class="text-red-500 mt-2 text-lg" name="first_name" />
-            </div>
-            <!-- phone -->
-            <div class="custom__input">
-              <vee-field
-                name="email"
-                id="email"
-                type="text]"
-                placeholder="Email"
-                v-model="formData.email"
-              />
-              <ErrorMessage class="text-red-500 mt-2 text-lg" name="email" />
-            </div>
-            <!-- email -->
-            <div class="custom__input">
-              <vee-field
-                name="phone_number"
-                id="phone_number"
-                type="number"
-                placeholder="Phone Number"
-                v-model="formData.phone_number"
-              />
-              <ErrorMessage class="text-red-500 mt-2 text-lg" name="phone_number" />
-            </div>
-            <!-- message -->
-            <div class="message">
-              <vee-field
-                as="textarea"
-                name="message"
-                id="message"
-                type="text"
-                placeholder="Message"
-                v-model="formData.message"
-              />
-              <ErrorMessage class="text-red-500 mt-2 text-lg" name="message" />
-            </div>
-            <div class="btn-container">
-              <button class="btn submit-btn" :disabled="reg_in_submission" value="Create account">
-                Submit
-              </button>
-            </div>
-          </vee-form>
-        </div>
+        <vee-form :validation-schema="schema" class="form" @submit="register">
+          <h1 class="form__header">Questions or need assistance?</h1>
+          <p class="form__sub--header">Let us know about it!</p>
+          <p class="form__sub--herder-two">Email us below to any question related to our event</p>
+          <!-- first name -->
+          <div class="custom__input">
+            <vee-field
+              name="first_name"
+              id="first_name"
+              type="text"
+              placeholder="First Name"
+              v-model="formData.first_name"
+            />
+            <ErrorMessage class="text-red-500 mt-2 text-lg" name="first_name" />
+          </div>
+          <!-- phone -->
+          <div class="custom__input">
+            <vee-field
+              name="email"
+              id="email"
+              type="text]"
+              placeholder="Email"
+              v-model="formData.email"
+            />
+            <ErrorMessage class="text-red-500 mt-2 text-lg" name="email" />
+          </div>
+          <!-- email -->
+          <div class="custom__input">
+            <vee-field
+              name="phone_number"
+              id="phone_number"
+              type="number"
+              placeholder="Phone Number"
+              v-model="formData.phone_number"
+            />
+            <ErrorMessage class="text-red-500 mt-2 text-lg" name="phone_number" />
+          </div>
+          <!-- message -->
+          <div class="message">
+            <vee-field
+              as="textarea"
+              name="message"
+              id="message"
+              type="text"
+              placeholder="Message"
+              v-model="formData.message"
+            />
+            <ErrorMessage class="text-red-500 mt-2 text-lg" name="message" />
+          </div>
+          <div class="btn-container">
+            <button class="btn submit-btn" :disabled="reg_in_submission" value="Submit">
+              Submit
+            </button>
+          </div>
+        </vee-form>
       </div>
     </div>
 
@@ -146,7 +143,7 @@ export default {
       },
       reg_in_submission: false,
       reg_show_alert: false,
-      reg_alert_variant: 'bg-indigo-500',
+      reg_alert_variant: 'bg-indigo-500 ',
       reg_alert_message: 'Please wait! Account is being registered.'
     }
   },
@@ -154,16 +151,12 @@ export default {
   methods: {
     register(values) {
       console.log(values)
-    },
-
-    register(values) {
       this.reg_show_alert = true
       this.reg_in_submission = true
       this.reg_alert_variant = 'bg-indigo-500'
       this.reg_alert_msg = 'Please wait! Your account is being created.'
-      this.reg_alert_variant = 'bg-green-500'
+      this.reg_alert_variant = 'bg-green-500 rounded'
       this.reg_alert_msg = 'Thank You! Your Message has been delivered.'
-      console.log(values)
     },
 
     // api call

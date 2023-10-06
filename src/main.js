@@ -34,3 +34,5 @@ app.mount('#app')
 //
 
 app.use(VeeValidatePlugin)
+
+app.config.globalProperties.$scrollToTop = () => window.scrollTo(0, 0)

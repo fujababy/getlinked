@@ -1,7 +1,8 @@
 <template>
   <section class="register__page">
+    <!--alert message-->
     <div
-      class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 cursor-pointer"
+      class="shadow-lg mt-3 pt-3 pb-3 w-full text-white text-center hover:bg-indigo-400 cursor-pointer animate-bounce"
       v-if="reg_show_alert"
       :class="reg_alert_variant"
     >
@@ -16,7 +17,7 @@
       </div>
 
       <div class="flex__item-2">
-        <vee-form class="register__form" :validation-schema="schema" @submit="registerForm">
+        <vee-form :validation-schema="schema" class="register__form" @submit="register">
           <h1 class="form__header animate-pulse">Register</h1>
           <div class="sub-heading-container">
             <p class="sub-heading-text">Be part of this movement!</p>
@@ -37,6 +38,7 @@
                 name="team_name"
                 type="text"
                 placeholder="Enter the name of your group"
+                v-model="formData.team_name"
               />
               <ErrorMessage class="text-red-500 mt-2 text-lg block" name="team_name" />
             </div>
@@ -47,6 +49,7 @@
                 name="phone"
                 type="text"
                 placeholder="Enter your phone number"
+                v-model="formData.phone_number"
               />
               <ErrorMessage class="text-red-500 mt-2 text-lg block" name="phone" />
             </div>
@@ -59,6 +62,7 @@
                 name="email"
                 type="text"
                 placeholder="Enter your email address"
+                v-model="formData.email"
               />
               <ErrorMessage class="text-red-500 mt-2 text-lg block" name="email" />
             </div>
@@ -69,6 +73,7 @@
                 name="project"
                 type="text"
                 placeholder="What is your group project topic"
+                v-model="formData.project_topic"
               />
               <ErrorMessage class="text-red-500 mt-2 text-lg block" name="project" />
             </div>
@@ -76,7 +81,13 @@
           <div class="first__input-container">
             <div class="input__container">
               <label for="">Category</label>
-              <vee-field as="select" name="category" id="" class="select">
+              <vee-field
+                as="select"
+                name="category"
+                id=""
+                class="select"
+                v-model="formData.category"
+              >
                 <option value="select">Select your category</option>
                 <option value="1">1</option>
                 <option value="2">2</option>
@@ -85,7 +96,7 @@
             </div>
             <div class="input__container">
               <label for="">Group Size</label>
-              <vee-field as="select" class="select" name="group">
+              <vee-field as="select" class="select" name="group" v-model="formData.group_size">
                 <option value="select">Select</option>
                 <option value="1">1</option>
                 <option value="10">10</option>
@@ -99,7 +110,7 @@
             <span class="review">Please review your registration details before submitting</span>
 
             <span class="radio__container">
-              <input type="checkbox" v-model="formData.true" />
+              <input type="checkbox" v-model="formData.privacy_policy_accepted" />
               I agreed with the event terms and conditions and privacy policy
             </span>
           </div>
@@ -149,18 +160,14 @@ export default {
   },
 
   methods: {
-    onSubmit(values) {
-      console.log(values)
-    },
-
     register(values) {
+      console.log(values)
       this.reg_show_alert = true
       this.reg_in_submission = true
       this.reg_alert_variant = 'bg-indigo-500'
       this.reg_alert_msg = 'Please wait! Your account is being created.'
-      this.reg_alert_variant = 'bg-green-500'
+      this.reg_alert_variant = 'bg-green-500 rounded'
       this.reg_alert_msg = 'Thank You! Your Message has been delivered.'
-      console.log(values)
     },
 
     // api call

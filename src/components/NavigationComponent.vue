@@ -3,7 +3,7 @@
     <nav>
       <div class="desktop-view">
         <a href="/">
-          <h1>get<span class="color-purple">linked</span></h1>
+          <h1 class="cursor-pointer">get<span class="color-purple">linked</span></h1>
         </a>
         <div>
           <ul>
